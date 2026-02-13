@@ -1,3 +1,10 @@
+/* Reset global pour éviter les débordements et bugs de layout */
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
 /* Section Stack technique */
 .stack-section {
     background: var(--color-card);
