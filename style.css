@@ -249,6 +249,197 @@
     --btn-shadow: 0 4px 16px var(--color-shadow);
     --btn-radius: 16px;
     --btn-gradient: linear-gradient(90deg, #1565c0 0%, #274472 100%);
+    --badge-bg: #e3eaf6;
+    --badge-color: #1565c0;
+    --badge-shadow: 0 2px 8px var(--color-shadow);
+    --focus-outline: 2px solid #1565c0;
+}
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 0.98rem;
+    color: var(--color-secondary);
+    margin: 1.5rem 0 2.2rem 0;
+    padding-left: 0.2rem;
+    letter-spacing: 0.1px;
+}
+.breadcrumb a {
+    color: var(--color-link);
+    text-decoration: underline;
+    transition: color var(--transition);
+}
+.breadcrumb a:hover, .breadcrumb a:focus {
+    color: var(--color-link-hover);
+}
+/* Project badge SAE */
+.project-badge {
+    display: inline-block;
+    background: var(--badge-bg);
+    color: var(--badge-color);
+    border-radius: 8px;
+    padding: 0.3em 1em;
+    font-size: 0.98em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: var(--badge-shadow);
+    margin-bottom: 0.7rem;
+    margin-right: 0.5rem;
+    border: 1px solid var(--color-border);
+}
+.project-badges {
+    margin-bottom: 0.5rem;
+}
+/* Project link (cartes cliquables) */
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow var(--transition), transform var(--transition), background var(--transition);
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    display: block;
+}
+.project-link:focus {
+    outline: var(--focus-outline);
+    z-index: 2;
+}
+.project-link:hover, .project-link:focus {
+    background: linear-gradient(90deg, #e3eaf6 60%, #fff 100%);
+    box-shadow: 0 12px 36px var(--color-shadow);
+    transform: translateY(-4px) scale(1.025);
+}
+.project-link-arrow {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+    font-size: 1.5em;
+    color: var(--color-accent);
+    opacity: 0.7;
+    transition: opacity var(--transition), right var(--transition);
+}
+.project-link:hover .project-link-arrow, .project-link:focus .project-link-arrow {
+    opacity: 1;
+    right: 0.7rem;
+}
+/* Project case study (pages projets) */
+.project-case-study {
+    background: var(--color-bg);
+    padding: 40px 0 60px 0;
+}
+.project-header {
+    margin-bottom: 2.2rem;
+    text-align: left;
+}
+.project-header h1 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    max-width: 700px;
+    line-height: 1.2;
+}
+.project-sections section {
+    margin-bottom: 2.1rem;
+    max-width: 700px;
+    line-height: 1.7;
+}
+.project-sections h2 {
+    color: var(--color-accent);
+    font-size: 1.13rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.2px;
+}
+.stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 0.7rem;
+    padding-left: 0;
+    list-style: none;
+}
+.stack-list li {
+    background: var(--color-bg-dark);
+    color: var(--color-accent);
+    border-radius: 8px;
+    padding: 0.4em 1.1em;
+    font-size: 0.98em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px var(--color-shadow);
+    border: 1px solid var(--color-border);
+}
+.project-actions {
+    margin-top: 2.5rem;
+}
+/* Proofs (Preuves) */
+.proofs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+.proof-placeholder {
+    background: var(--color-bg-dark);
+    border: 2px dashed var(--color-accent);
+    border-radius: 10px;
+    min-width: 180px;
+    min-height: 120px;
+    max-width: 260px;
+    flex: 1 1 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    font-size: 1.01rem;
+    font-style: italic;
+    text-align: center;
+    opacity: 0.85;
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+/* Expériences / Engagements */
+.experiences-section {
+    background: var(--color-card);
+    padding: 60px 0 40px 0;
+    border-top: 1px solid var(--color-border);
+}
+.experiences-section h2 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.18rem;
+    font-weight: 700;
+}
+.experiences-list {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-secondary);
+    font-size: 1.08rem;
+    list-style: disc inside;
+    padding-left: 0.5rem;
+    line-height: 1.7;
+}
+.experiences-list strong {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+/* Accessibilité focus visible */
+a:focus, button:focus, .btn-primary:focus, .btn-secondary:focus, .project-link:focus {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+    z-index: 2;
+}
+@media (max-width: 700px) {
+    .project-header h1 {
+        font-size: 1.3rem;
+    }
+    .project-sections section {
+        max-width: 98vw;
+    }
+    .proof-placeholder {
+        min-width: 120px;
+        min-height: 70px;
+        font-size: 0.93rem;
+    }
 }
 
 html {
