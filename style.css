@@ -1,3 +1,90 @@
+/* ===== THEME / VARIABLES (obligatoire car ton CSS utilise var(--color-...)) ===== */
+:root{
+  --color-bg: #f5f7fb;
+  --color-card: #ffffff;
+  --color-bg-dark: #eef2f8;
+  --color-border: rgba(15, 23, 42, 0.10);
+
+  --color-text: #0f172a;
+  --color-muted: rgba(15, 23, 42, 0.70);
+
+  --color-primary: #1565c0;
+  --color-primary-dark: #0f4ea0;
+
+  --shadow-sm: 0 6px 18px rgba(2, 8, 23, 0.08);
+  --shadow-md: 0 14px 36px rgba(2, 8, 23, 0.10);
+
+  --radius: 18px;
+  --radius-sm: 12px;
+
+  --focus-outline: 3px solid rgba(21, 101, 192, 0.35);
+
+    /* Variables manquantes utilisées plus bas dans ton CSS */
+  --color-accent: var(--color-primary);
+  --color-secondary: var(--color-muted);
+  --color-shadow: rgba(2, 8, 23, 0.12);
+
+  --shadow: var(--shadow-sm);
+  --transition: .18s ease;
+
+  --btn-gradient: linear-gradient(90deg, #0d47a1 0%, #1565c0 100%);
+  --btn-radius: 14px;
+  --btn-shadow: var(--shadow-sm);
+
+  --font-main: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-primary-dark);
+
+}
+
+/* ===== BASE ===== */
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    background: var(--color-bg);
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background: var(--color-bg);
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+section{ scroll-margin-top: 90px; }
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+.projects-section h2,
+.about-section h2,
+.skills-section h2,
+.stack-section h2,
+.contact-section h2 {
+  font-size: 1.9rem;
+}
+
+
+/* ===== BUTTONS (si ton CSS en a déjà, ça harmonise) ===== */
+
+.btn-primary:hover{ transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+.btn-secondary:hover{ transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+
+
 /* Reset global pour éviter les débordements et bugs de layout */
 * {
     box-sizing: border-box;
@@ -115,32 +202,7 @@ body {
     opacity: 0.85;
     box-shadow: 0 2px 8px var(--color-shadow);
 }
-/* Expériences / Engagements */
-.experiences-section {
-    background: var(--color-card);
-    padding: 60px 0 40px 0;
-    border-top: 1px solid var(--color-border);
-}
-.experiences-section h2 {
-    color: var(--color-primary);
-    text-align: center;
-    margin-bottom: 1.2rem;
-    font-size: 1.18rem;
-    font-weight: 700;
-}
-.experiences-list {
-    max-width: 700px;
-    margin: 0 auto;
-    color: var(--color-secondary);
-    font-size: 1.08rem;
-    list-style: disc inside;
-    padding-left: 0.5rem;
-    line-height: 1.7;
-}
-.experiences-list strong {
-    color: var(--color-accent);
-    font-weight: 600;
-}
+
 /* Accessibilité focus visible */
 a:focus, button:focus, .btn-primary:focus, .btn-secondary:focus, .project-link:focus {
     outline: var(--focus-outline);
@@ -159,25 +221,6 @@ a:focus, button:focus, .btn-primary:focus, .btn-secondary:focus, .project-link:f
         min-height: 70px;
         font-size: 0.93rem;
     }
-}
-
-html {
-    scroll-behavior: smooth;
-    background: var(--color-bg);
-}
-
-body {
-    margin: 0;
-    font-family: var(--font-main);
-    color: var(--color-text);
-    background: var(--color-bg);
-    min-height: 100vh;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
 /* ===== NAVBAR ===== */
