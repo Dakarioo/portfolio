@@ -1,202 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonin Cavory--Dupuis | Portfolio Data Analyst</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Favicon et autres meta SEO peuvent être ajoutés ici -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antonin Cavory--Dupuis | Portfolio Data Analyst</title>
+
+  <!-- IMPORTANT GitHub Pages: chemins relatifs -->
+  <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">Antonin Cavory--Dupuis</div>
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#apropos">À propos</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- NAVBAR (match CSS: .nav-inner, .brand, .nav-links) -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="./index.html#accueil">Antonin Cavory--Dupuis</a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="./index.html#accueil">Accueil</a>
+        <a href="./index.html#projets">Projets</a>
+        <a href="./index.html#apropos">À propos</a>
+        <a href="./index.html#competences">Compétences</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (match CSS: .hero + .hero-content) -->
+    <section id="accueil" class="hero">
+      <div class="container hero-content">
+        <h1 class="hero-name">Antonin Cavory--Dupuis</h1>
+        <h2 class="hero-title">Étudiant en Science des Données spécialisé en analyse décisionnelle</h2>
+        <p class="hero-impact">
+          Je conçois des solutions data permettant de transformer des données complexes en leviers stratégiques d’aide à la décision.
+        </p>
+
+        <div class="hero-btns">
+          <a href="./index.html#projets" class="btn-primary btn-cta">Découvrir mes réalisations</a>
+          <a href="./assets/CV.pdf" class="btn-secondary" download aria-label="Télécharger mon CV">Télécharger CV</a>
         </div>
-    </header>
-    <main>
-                <!-- Section Projet phare -->
-                <section id="projet-phare" class="featured-project-section">
-                    <div class="container">
-                        <div class="featured-project-card">
-                            <div class="featured-project-visual">
-                                <!DOCTYPE html>
-                                <html lang="fr">
-                                <head>
-                                    <meta charset="UTF-8">
-                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                    <title>Antonin Cavory--Dupuis | Portfolio Data &amp; Décisionnel</title>
-                                    <meta name="description" content="Portfolio premium d’Antonin Cavory--Dupuis, étudiant en Science des Données, projets BI, Data Engineering, analyse décisionnelle.">
-                                    <link rel="stylesheet" href="./style.css">
-                                    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-                                    <!-- Open Graph (optionnel) -->
-                                    <meta property="og:title" content="Antonin Cavory--Dupuis | Portfolio Data &amp; Décisionnel">
-                                    <meta property="og:description" content="Projets BI, Data Engineering, analyse décisionnelle.">
-                                    <meta property="og:type" content="website">
-                                    <meta property="og:url" content="https://github.io/portfolio/">
-                                </head>
-                                <body>
-                                    <!-- Navbar premium -->
-                                    <header class="navbar">
-                                        <div class="container nav-container">
-                                            <div class="logo">Antonin Cavory--Dupuis</div>
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="#accueil">Accueil</a></li>
-                                                    <li><a href="#projets">Projets</a></li>
-                                                    <li><a href="#apropos">À propos</a></li>
-                                                    <li><a href="#competences">Compétences</a></li>
-                                                    <li><a href="#contact">Contact</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </header>
-                                    <main>
-                                        <!-- HERO HEADER -->
-                                        <section id="accueil" class="hero-section">
-                                            <div class="container hero-content">
-                                                <h1 class="hero-name">Antonin Cavory--Dupuis</h1>
-                                                <h2 class="hero-title">Étudiant en Science des Données spécialisé en analyse décisionnelle</h2>
-                                                <p class="hero-impact">Je conçois des solutions data permettant de transformer des données complexes en leviers stratégiques d’aide à la décision.</p>
-                                                <div class="hero-btns">
-                                                    <a href="#projets" class="btn-primary btn-cta">Découvrir mes réalisations</a>
-                                                    <a href="./assets/CV.pdf" class="btn-secondary" download aria-label="Télécharger mon CV">Télécharger CV</a>
-                                                </div>
-                                                <div class="hero-availability">Disponibilité stage : avril 2026 (10 semaines min) – Hauts-de-France</div>
-                                            </div>
-                                        </section>
-                                        <!-- Section Projet phare (carte cliquable) -->
-                                        <section id="projet-phare" class="featured-project-section">
-                                            <div class="container">
-                                                <a href="./projects/sae-3-02-datawarehouse.html" class="featured-project-card project-link" aria-label="Voir le projet Datawarehouse SAE 3.02">
-                                                    <div class="featured-project-visual">
-                                                        <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                                            <rect x="10" y="20" width="70" height="50" rx="12" fill="#1565c0"/>
-                                                            <rect x="20" y="30" width="50" height="30" rx="8" fill="#e3eaf6"/>
-                                                            <circle cx="45" cy="45" r="8" fill="#1565c0"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="featured-project-content">
-                                                        <div class="project-badges"><span class="project-badge">SAE 3.02</span></div>
-                                                        <h2>Industrialisation d’un Datawarehouse</h2>
-                                                        <p class="project-desc">Centralisation de sources hétérogènes, modélisation, ETL, restitution décisionnelle.</p>
-                                                        <span class="project-link-arrow" aria-hidden="true">→</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </section>
-                                        <!-- Section Projets (cartes cliquables) -->
-                                        <section id="projets" class="projects-section">
-                                            <div class="container">
-                                                <h2>Projets</h2>
-                                                <div class="projects-grid">
-                                                    <a href="./projects/sae-4-02-reporting-multivarie.html" class="project-card project-link" aria-label="Voir le projet Reporting multivarié SAE 4.02">
-                                                        <div class="project-badges"><span class="project-badge">SAE 4.02</span></div>
-                                                        <h3>Reporting d’une analyse multivariée</h3>
-                                                        <p class="project-desc">Analyse exploratoire, ACP, visualisations, restitution des résultats.</p>
-                                                        <span class="project-link-arrow" aria-hidden="true">→</span>
-                                                    </a>
-                                                    <a href="./projects/sae-3-vcod-01-collecte-web.html" class="project-card project-link" aria-label="Voir le projet Collecte web SAE 3.VCOD.01">
-                                                        <div class="project-badges"><span class="project-badge">SAE 3.VCOD.01</span></div>
-                                                        <h3>Collecte automatisée de données web / Application Python</h3>
-                                                        <p class="project-desc">Pipeline de collecte, API, web scraping, analyse et visualisation.</p>
-                                                        <span class="project-link-arrow" aria-hidden="true">→</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <!-- Section Expériences / Engagements (bonus) -->
-                                        <section id="experiences" class="experiences-section">
-                                            <div class="container">
-                                                <h2>Expériences &amp; Engagements</h2>
-                                                <ul class="experiences-list">
-                                                    <li><strong>ASPTT Lille</strong> – Engagement associatif, gestion de données d’adhérents</li>
-                                                    <li><strong>Vercors Supercars</strong> – Participation à l’organisation d’événements, logistique</li>
-                                                </ul>
-                                            </div>
-                                        </section>
-                                        <!-- Section À propos -->
-                                        <section id="apropos" class="about-section">
-                                            <div class="container">
-                                                <h2>À propos</h2>
-                                                <p>
-                                                    Passionné par la donnée et la prise de décision, j’ai développé une expertise sur l’ensemble du cycle de vie de la donnée : collecte, modélisation, automatisation, analyse et restitution. Ma démarche s’appuie sur une logique data-driven et une forte sensibilité métier pour transformer la donnée brute en leviers stratégiques. Je recherche un stage à partir d’avril 2026 pour contribuer à des projets ambitieux, en apportant rigueur, esprit d’analyse et sens du résultat.
-                                                </p>
-                                            </div>
-                                        </section>
-                                        <!-- Section Compétences -->
-                                        <section id="competences" class="skills-section">
-                                            <div class="container">
-                                                <h2>Compétences</h2>
-                                                <div class="skills-categories">
-                                                    <div class="skills-category">
-                                                        <h3>Data Engineering</h3>
-                                                        <div class="skills-badges">
-                                                            <span>SQL</span>
-                                                            <span>ETL</span>
-                                                            <span>Data Modeling</span>
-                                                            <span>API</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="skills-category">
-                                                        <h3>Data Analyse</h3>
-                                                        <div class="skills-badges">
-                                                            <span>Python</span>
-                                                            <span>Statistiques</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="skills-category">
-                                                        <h3>Data Visualisation</h3>
-                                                        <div class="skills-badges">
-                                                            <span>Power BI</span>
-                                                            <span>Data Visualization</span>
-                                                            <span>Qlik</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <!-- Section Stack technique -->
-                                        <section id="stack" class="stack-section">
-                                            <div class="container">
-                                                <h2>Stack technique</h2>
-                                                <div class="stack-content">
-                                                    <span>Environnement technique :</span>
-                                                    <span class="stack-list">SQL &bull; Python &bull; Power BI &bull; Qlik &bull; ETL &bull; Modélisation &bull; API &bull; Statistiques</span>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <!-- Section Contact -->
-                                        <section id="contact" class="contact-section">
-                                            <div class="container">
-                                                <h2>Contact</h2>
-                                                <div class="contact-links">
-                                                    <a href="https://www.linkedin.com/in/antonin-cavory-dupuis" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
-                                                    <a href="mailto:antonin.cavory.dupuis@gmail.com" class="contact-link">antonin.cavory.dupuis@gmail.com</a>
-                                                    <a href="./assets/CV.pdf" class="btn-secondary" download aria-label="Télécharger mon CV">Télécharger CV</a>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </main>
-                                    <footer class="footer">
-                                        <div class="container">
-                                            <div class="footer-content">
-                                                <span class="footer-name">Antonin Cavory--Dupuis</span>
-                                                <span class="footer-sep">|</span>
-                                                <span class="footer-role">Portfolio Data &amp; Décisionnel</span>
-                                                <span class="footer-sep">|</span>
-                                                <span class="footer-year">&copy; 2026</span>
-                                            </div>
-                                        </div>
-                                    </footer>
-                                    <script src="./script.js"></script>
-                                </body>
-                                </html>
+
+        <div class="hero-availability">Disponibilité stage : avril 2026 (10 semaines min) – Hauts-de-France</div>
+      </div>
+    </section>
+
+    <!-- PROJET PHARE -->
+    <section id="projet-phare" class="featured-project-section">
+      <div class="container">
+        <a href="./projects/sae-3-02-datawarehouse.html" class="featured-project-card project-link" aria-label="Voir le projet Datawarehouse SAE 3.02">
+          <div class="featured-project-visual">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="10" y="20" width="70" height="50" rx="12" fill="#1565c0"></rect>
+              <rect x="20" y="30" width="50" height="30" rx="8" fill="#e3eaf6"></rect>
+              <circle cx="45" cy="45" r="8" fill="#1565c0"></circle>
+            </svg>
+          </div>
+
+          <div class="featured-project-content">
+            <div class="project-badges"><span class="project-badge">SAE 3.02</span></div>
+            <h2>Industrialisation d’un Datawarehouse</h2>
+            <p class="project-desc">Centralisation de sources hétérogènes, modélisation, ETL, restitution décisionnelle.</p>
+            <span class="project-link-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="projects-section">
+      <div class="container">
+        <h2>Projets</h2>
+
+        <div class="projects-grid">
+          <a href="./projects/sae-4-02-reporting-multivarie.html" class="project-card project-link" aria-label="Voir le projet Reporting multivarié SAE 4.02">
+            <div class="project-badges"><span class="project-badge">SAE 4.02</span></div>
+            <h3>Reporting d’une analyse multivariée</h3>
+            <p class="project-desc">Analyse exploratoire, ACP, visualisations, restitution des résultats.</p>
+            <span class="project-link-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="./projects/sae-3-vcod-01-collecte-web.html" class="project-card project-link" aria-label="Voir le projet Collecte web SAE 3.VCOD.01">
+            <div class="project-badges"><span class="project-badge">SAE 3.VCOD.01</span></div>
+            <h3>Collecte automatisée de données web / Application Python</h3>
+            <p class="project-desc">Pipeline de collecte, API, web scraping, analyse et visualisation.</p>
+            <span class="project-link-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section id="experiences" class="experiences-section">
+      <div class="container">
+        <h2>Expériences &amp; Engagements</h2>
+        <ul class="experiences-list">
+          <li><strong>ASPTT Lille</strong> – Engagement associatif, gestion de données d’adhérents</li>
+          <li><strong>Vercors Supercars</strong> – Participation à l’organisation d’événements, logistique</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- A PROPOS -->
+    <section id="apropos" class="about-section">
+      <div class="container">
+        <h2>À propos</h2>
+        <p>
+          Passionné par la donnée et la prise de décision, j’ai développé une expertise sur l’ensemble du cycle de vie de la donnée :
+          collecte, modélisation, automatisation, analyse et restitution. Ma démarche s’appuie sur une logique data-driven et une forte
+          sensibilité métier pour transformer la donnée brute en leviers stratégiques. Je recherche un stage à partir d’avril 2026 pour
+          contribuer à des projets ambitieux, en apportant rigueur, esprit d’analyse et sens du résultat.
+        </p>
+      </div>
+    </section>
+
+    <!-- COMPETENCES (match CSS: .skills-grid) -->
+    <section id="competences" class="skills-section">
+      <div class="container">
+        <h2>Compétences</h2>
+
+        <div class="skills-grid" aria-label="Compétences clés">
+          <span>SQL</span>
+          <span>ETL</span>
+          <span>Data Modeling</span>
+          <span>API</span>
+          <span>Python</span>
+          <span>Statistiques</span>
+          <span>Power BI</span>
+          <span>Qlik</span>
+          <span>Data Visualization</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK (corrigé: .stack-list doit être un UL + LI) -->
+    <section id="stack" class="stack-section">
+      <div class="container">
+        <h2>Stack technique</h2>
+
+        <div class="stack-content">
+          <span>Environnement technique :</span>
+          <ul class="stack-list" aria-label="Technologies">
+            <li>SQL</li>
+            <li>Python</li>
+            <li>Power BI</li>
+            <li>Qlik</li>
+            <li>ETL</li>
+            <li>Modélisation</li>
+            <li>API</li>
+            <li>Statistiques</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/antonin-cavory-dupuis" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+          <a href="mailto:antonin.cavory.dupuis@gmail.com" class="contact-link">antonin.cavory.dupuis@gmail.com</a>
+          <a href="./assets/CV.pdf" class="btn-secondary" download aria-label="Télécharger mon CV">Télécharger CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (match CSS: .footer ...) -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <span class="footer-name">Antonin Cavory--Dupuis</span>
+      <span class="footer-sep">•</span>
+      <span class="footer-role">Portfolio Data &amp; Décisionnel</span>
+      <span class="footer-sep">•</span>
+      <span class="footer-year">© 2026</span>
+    </div>
+  </footer>
+
+  <script defer src="./script.js"></script>
+</body>
+</html>
