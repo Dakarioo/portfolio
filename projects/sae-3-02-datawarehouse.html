@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAE 3.02 – Industrialisation d’un Datawarehouse | Antonin Cavory--Dupuis</title>
     <meta name="description" content="Projet phare : Industrialisation d’un Datawarehouse (SAE 3.02) – Antonin Cavory--Dupuis. Centralisation, modélisation, ETL, restitution décisionnelle.">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/projects.css">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <meta property="og:title" content="SAE 3.02 – Industrialisation d’un Datawarehouse | Antonin Cavory--Dupuis">
     <meta property="og:description" content="Projet phare : Industrialisation d’un Datawarehouse (SAE 3.02) – Centralisation, modélisation, ETL, restitution décisionnelle.">
@@ -13,18 +13,76 @@
 <body>
     <header class="navbar">
         <div class="container nav-container">
-            <div class="logo">Antonin Cavory--Dupuis</div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html#projets">Retour aux projets</a></li>
+            <a class="logo" href="../index.html">Antonin Cavory--Dupuis</a>
+
+            <nav aria-label="Navigation">
+                <ul class="nav-links">
+                    <li><a href="../index.html#projets">Projets</a></li>
+                    <li><a href="../index.html#apropos">À propos</a></li>
+                    <li><a href="../index.html#competences">Compétences</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
         <nav class="breadcrumb" aria-label="Fil d’Ariane">
-            <a href="../index.html">Accueil</a> &gt; <a href="../index.html#projets">Projets</a> &gt; <span>SAE 3.02</span>
+            <a href="../index.html">Accueil</a><span class="sep">›</span>
+            <a href="../index.html#projets">Projets</a><span class="sep">›</span>
+            <span>SAE 3.02</span>
         </nav>
+
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-hero-card">
+                    <span class="project-tag">SAE 3.02</span>
+                    <h1 class="project-title">Industrialisation d’un Datawarehouse</h1>
+                    <p class="project-subtitle">
+                    Centralisation de sources hétérogènes, modélisation dimensionnelle, ETL et restitution décisionnelle.
+                    </p>
+
+                    <div class="project-meta">
+                        <span class="pill">SQL</span>
+                        <span class="pill">ETL</span>
+                        <span class="pill">Modélisation</span>
+                        <span class="pill">Qualité</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="project-content">
+        <div class="container">
+            <section class="section-card">
+                <h2>Problème / Contexte</h2>
+                <p>...</p>
+            </section>
+
+            <section class="section-card">
+                <h2>Objectifs</h2>
+                <p>...</p>
+            </section>
+
+            ...
+        </div>
+    </main>
+
+    <footer class="project-footer">
+        <div class="container">
+            <a class="back-link" href="../index.html#projets">← Retour aux projets</a>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+<!--
+
         <section class="project-case-study">
             <div class="container">
                 <div class="project-header">
@@ -102,6 +160,8 @@
             </div>
         </div>
     </footer>
+-->
+    
     <script src="../script.js"></script>
 </body>
 </html>
