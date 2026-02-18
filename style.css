@@ -583,3 +583,17 @@ section {
         font-size: 0.98rem;
     }
 }
+
+/*CSS pour les compétences*/ 
+.skills-section {
+  padding: 80px 0;
+  background: #f9fafc;
+}
+
+.skills-list {
+  max-width: 800px;
+  margin: 30px auto 0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #374151;
+}
