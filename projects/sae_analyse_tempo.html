@@ -63,89 +63,93 @@
   <main class="project-content">
     <div class="container">
 
-      <section class="section-card">
+        <section class="section-card">
         <h2>Contexte</h2>
         <p>
-          Le Port d’Anvers-Bruges est un acteur majeur du commerce maritime européen. L’objectif est d’analyser les tendances du trafic
-          2019–2023 et de produire des prévisions utiles à l’allocation des ressources et à la stratégie portuaire.
+            Le port d’Anvers-Bruges est un hub logistique majeur en Europe. Anticiper l’activité portuaire est un enjeu
+            pour optimiser les infrastructures, la gestion des ressources humaines et la compétitivité.
+            Cette SAE analyse le trafic maritime journalier sur 2019–2023 afin d’identifier tendances, saisonnalités
+            et événements exceptionnels, puis de proposer des modèles de prévision.
         </p>
-      </section>
+        </section>
 
-      <section class="section-card">
-        <h2>Mission</h2>
-        <ul>
-          <li>Explorer la structure et la qualité des données (cohérence, valeurs extrêmes, corrélations).</li>
-          <li>Visualiser les dynamiques temporelles et détecter les anomalies / événements.</li>
-          <li>Décomposer la série (tendance, saisonnalité, résidus) et identifier des saisonnalités multiples.</li>
-          <li>Construire des modèles prédictifs intégrant des co-variables (si pertinent) et évaluer la fiabilité des prévisions.</li>
-        </ul>
-      </section>
-
-      <section class="section-card">
+        <section class="section-card">
         <h2>Données</h2>
         <ul>
-          <li><strong>Période :</strong> 01/01/2019 → 31/12/2023 (données journalières)</li>
-          <li><strong>Variables trafic :</strong> arrivées navires, tonnage, TEU, vrac liquide/sec, roro, type navire</li>
-          <li><strong>Variables éco :</strong> Brent, Baltic Dry Index, EUR/USD</li>
-          <li><strong>Calendrier :</strong> jours fériés (BE/EU), grèves</li>
+            <li><strong>Période :</strong> 01/01/2019 → 31/12/2023</li>
+            <li><strong>Granularité :</strong> journalière</li>
+            <li><strong>Taille :</strong> 1826 observations</li>
+            <li><strong>Qualité :</strong> continuité temporelle vérifiée, pas de valeurs manquantes significatives</li>
+            <li><strong>Valeurs extrêmes :</strong> conservées (grèves / faible activité), car informatives</li>
         </ul>
-      </section>
+        </section>
 
-      <section class="section-card">
+        <section class="section-card">
         <h2>Exploration & visualisation</h2>
         <ul>
-          <li>Contrôles qualité (valeurs manquantes, incohérences, outliers).</li>
-          <li>Graphiques temporels (autoplot / fpp2), comparaison weekdays vs week-ends.</li>
-          <li>Étude de l’impact des jours fériés et événements exceptionnels.</li>
+            <li><strong>Variabilité court terme :</strong> trafic très fluctuant au quotidien.</li>
+            <li><strong>Saisonnalité hebdomadaire :</strong> trafic plus élevé en semaine qu’en week-end.</li>
+            <li><strong>Comparaisons :</strong> baisse nette le week-end ; baisse plus modérée les jours fériés.</li>
+            <li><strong>Événements exceptionnels :</strong> journées de grève = chute brutale (anomalies majeures).</li>
         </ul>
-      </section>
+        </section>
 
-      <section class="section-card">
+        <section class="section-card">
+        <h2>Dépendance temporelle & corrélations</h2>
+        <ul>
+            <li><strong>ACF :</strong> dépendance temporelle significative sur les premiers retards ⇒ modèles chronologiques justifiés.</li>
+            <li><strong>Corrélations :</strong> fortes relations entre variables de trafic ; corrélations plus faibles avec variables économiques.</li>
+            <li><em>Note :</em> corrélation ≠ causalité (interprétation prudente).</li>
+        </ul>
+        </section>
+
+        <section class="section-card">
         <h2>Décomposition & saisonnalité</h2>
         <ul>
-          <li>Choix additif vs multiplicatif.</li>
-          <li>Décomposition tendance / saisonnalité / erreur.</li>
-          <li>Saisonnalité hebdomadaire, mensuelle, annuelle (si présente).</li>
-          <li>Analyse des résidus (bruit, anomalies, structure restante).</li>
+            <li><strong>Choix :</strong> modèle additif (amplitude saisonnière globalement constante).</li>
+            <li><strong>Fréquence :</strong> série agrégée en hebdomadaire pour faciliter l’analyse saisonnière.</li>
+            <li><strong>Résultat :</strong> tendance relativement stable + saisonnalité hebdomadaire marquée + résidus (fluctuations/événements).</li>
+            <li><strong>Résidus :</strong> ACF des résidus ≠ bruit blanc parfait ⇒ la décomposition seule ne capture pas toute la dépendance temporelle.</li>
         </ul>
-      </section>
+        </section>
 
-      <section class="section-card">
+        <section class="section-card">
         <h2>Modélisation & prévision</h2>
         <ul>
-          <li>Modèles adaptés aux séries temporelles (baseline + modèles plus performants).</li>
-          <li>Intégration de co-variables (prix pétrole, index, EUR/USD, fériés, grèves).</li>
-          <li>Évaluation (erreurs de prévision, backtesting, regard critique).</li>
+            <li><strong>Modèles testés :</strong> ETS et ARIMA.</li>
+            <li><strong>Protocole :</strong> séparation apprentissage / test pour évaluer objectivement les performances.</li>
+            <li><strong>Comparaison :</strong> métriques d’erreur (RMSE, MAE) ; modèle retenu = erreur la plus faible.</li>
+            <li><strong>Prévisions :</strong> ajustement final sur l’ensemble des données + intervalles de confiance.</li>
         </ul>
-      </section>
+        </section>
 
-      <section class="section-card">
-        <h2>Livrables</h2>
+        <section class="section-card">
+        <h2>Résultats clés</h2>
         <ul>
-          <li>Rapport : contexte + synthèse non-statisticien + détails techniques + conclusion (préconisations).</li>
-          <li>Code R exécutable.</li>
-          <li>Présentation orale (≈ 5 min + Q/R).</li>
+            <li>Saisonnalité hebdomadaire confirmée (activité semaine > week-end).</li>
+            <li>Jours fériés : impact négatif léger ; grèves : impact très fort (anomalies majeures).</li>
+            <li>Prévisions hebdomadaires produites avec intervalles de confiance (incertitude intégrée).</li>
         </ul>
-      </section>
+        </section>
 
-      <section class="section-card">
+        <section class="section-card">
+        <h2>Regard critique</h2>
+        <p>
+            Les modèles restent sensibles aux événements exceptionnels (grèves, perturbations économiques).
+            Les résultats doivent donc être interprétés avec prudence : les prévisions sont fiables à court terme,
+            mais peuvent être dégradées par des chocs exogènes.
+        </p>
+        </section>
+
+        <section class="section-card">
         <h2>Stack technique</h2>
         <ul>
-          <li>R</li>
-          <li>fpp2 / forecast</li>
-          <li>ggplot2 / autoplot</li>
-          <li>tidyverse (manipulation)</li>
+            <li>R</li>
+            <li>Modèles : ETS, ARIMA</li>
+            <li>Analyse : ACF, décomposition additive</li>
+            <li>Évaluation : RMSE, MAE</li>
         </ul>
-      </section>
-
-      <section class="section-card">
-        <h2>Preuves (à ajouter)</h2>
-        <ul>
-          <li>Captures : visualisations clés (tendance, saisonnalité, anomalies)</li>
-          <li>Tableaux d’évaluation (métriques, comparaison modèles)</li>
-          <li>Extraits de code R (propre + reproductible)</li>
-        </ul>
-      </section>
+        </section>
 
     </div>
   </main>
