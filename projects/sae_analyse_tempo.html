@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SAE – Séries temporelles (Port d’Anvers-Bruges) | Antonin Cavory--Dupuis</title>
+  <meta name="description" content="Analyse 2019–2023 du trafic du Port d’Anvers-Bruges et prévisions : exploration, saisonnalité, modèles prédictifs, rapport et code R." />
+
+  <link rel="stylesheet" href="../assets/projects.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+
+  <meta property="og:title" content="SAE – Séries temporelles (Port d’Anvers-Bruges) | Antonin Cavory--Dupuis" />
+  <meta property="og:description" content="Exploration, décomposition, modélisation et prévisions du trafic maritime (2019–2023). Rapport + code R." />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="logo" href="../index.html">Antonin Cavory--Dupuis</a>
+
+      <nav aria-label="Navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html#projets">Projets</a></li>
+          <li><a href="../index.html#apropos">À propos</a></li>
+          <li><a href="../index.html#competences">Compétences</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Fil d’Ariane">
+    <a href="../index.html">Accueil</a><span class="sep">›</span>
+    <a href="../index.html#projets">Projets</a><span class="sep">›</span>
+    <span>SAE – Séries temporelles</span>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <div class="project-hero-card">
+        <!-- Remplace le badge par le numéro exact si ton cours l’exige (ex: SAE 4.0X) -->
+        <span class="project-tag">SAE – Séries temporelles</span>
+
+        <h1 class="project-title">Description & prévision de données temporelles</h1>
+
+        <p class="project-subtitle">
+          Analyse du trafic du Port d’Anvers-Bruges sur 2019–2023 (données journalières) et construction de modèles de prévision
+          pour soutenir la planification des ressources et des investissements.
+        </p>
+
+        <div class="project-meta">
+          <span class="pill">R</span>
+          <span class="pill">fpp2</span>
+          <span class="pill">Visualisation</span>
+          <span class="pill">Décomposition</span>
+          <span class="pill">Prévision</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="project-content">
+    <div class="container">
+
+      <section class="section-card">
+        <h2>Contexte</h2>
+        <p>
+          Le Port d’Anvers-Bruges est un acteur majeur du commerce maritime européen. L’objectif est d’analyser les tendances du trafic
+          2019–2023 et de produire des prévisions utiles à l’allocation des ressources et à la stratégie portuaire.
+        </p>
+      </section>
+
+      <section class="section-card">
+        <h2>Mission</h2>
+        <ul>
+          <li>Explorer la structure et la qualité des données (cohérence, valeurs extrêmes, corrélations).</li>
+          <li>Visualiser les dynamiques temporelles et détecter les anomalies / événements.</li>
+          <li>Décomposer la série (tendance, saisonnalité, résidus) et identifier des saisonnalités multiples.</li>
+          <li>Construire des modèles prédictifs intégrant des co-variables (si pertinent) et évaluer la fiabilité des prévisions.</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <h2>Données</h2>
+        <ul>
+          <li><strong>Période :</strong> 01/01/2019 → 31/12/2023 (données journalières)</li>
+          <li><strong>Variables trafic :</strong> arrivées navires, tonnage, TEU, vrac liquide/sec, roro, type navire</li>
+          <li><strong>Variables éco :</strong> Brent, Baltic Dry Index, EUR/USD</li>
+          <li><strong>Calendrier :</strong> jours fériés (BE/EU), grèves</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <h2>Exploration & visualisation</h2>
+        <ul>
+          <li>Contrôles qualité (valeurs manquantes, incohérences, outliers).</li>
+          <li>Graphiques temporels (autoplot / fpp2), comparaison weekdays vs week-ends.</li>
+          <li>Étude de l’impact des jours fériés et événements exceptionnels.</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <h2>Décomposition & saisonnalité</h2>
+        <ul>
+          <li>Choix additif vs multiplicatif.</li>
+          <li>Décomposition tendance / saisonnalité / erreur.</li>
+          <li>Saisonnalité hebdomadaire, mensuelle, annuelle (si présente).</li>
+          <li>Analyse des résidus (bruit, anomalies, structure restante).</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <h2>Modélisation & prévision</h2>
+        <ul>
+          <li>Modèles adaptés aux séries temporelles (baseline + modèles plus performants).</li>
+          <li>Intégration de co-variables (prix pétrole, index, EUR/USD, fériés, grèves).</li>
+          <li>Évaluation (erreurs de prévision, backtesting, regard critique).</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <h2>Livrables</h2>
+        <ul>
+          <li>Rapport : contexte + synthèse non-statisticien + détails techniques + conclusion (préconisations).</li>
+          <li>Code R exécutable.</li>
+          <li>Présentation orale (≈ 5 min + Q/R).</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <h2>Stack technique</h2>
+        <ul>
+          <li>R</li>
+          <li>fpp2 / forecast</li>
+          <li>ggplot2 / autoplot</li>
+          <li>tidyverse (manipulation)</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <h2>Preuves (à ajouter)</h2>
+        <ul>
+          <li>Captures : visualisations clés (tendance, saisonnalité, anomalies)</li>
+          <li>Tableaux d’évaluation (métriques, comparaison modèles)</li>
+          <li>Extraits de code R (propre + reproductible)</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="project-footer">
+    <div class="container">
+      <a class="back-link" href="../index.html#projets">← Retour aux projets</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
