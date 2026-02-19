@@ -54,11 +54,7 @@
         <div class="project-meta" aria-label="Technos et notions mobilisées">
           <span class="pill">R</span>
           <span class="pill">fpp2</span>
-          <span class="pill">ACF</span>
           <span class="pill">Décomposition</span>
-          <span class="pill">ETS</span>
-          <span class="pill">ARIMA</span>
-          <span class="pill">RMSE / MAE</span>
         </div>
       </div>
     </div>
@@ -73,10 +69,10 @@
         <h2>Fiche SAE</h2>
         <ul>
           <li><strong>Titre :</strong> SAE – Séries temporelles (Port d’Anvers-Bruges)</li>
-          <li><strong>Conditions :</strong> TP / projet encadré (individuel ou groupe selon consignes du module)</li>
-          <li><strong>Rendus :</strong> rapport + code R (reproductible) + présentation orale (≈ 5 min + Q/R)</li>
+          <li><strong>Conditions :</strong> TP / projet encadré (groupe)</li>
+          <li><strong>Rendus :</strong> rapport + code R + présentation orale</li>
           <li><strong>BCC associés :</strong> ANALYSER • TRAITER • VALORISER • MODÉLISER / DÉVELOPPER</li>
-          <li><strong>Pré-requis :</strong> statistiques descriptives, lecture de graphiques, bases de modélisation, R (manip + visualisation)</li>
+          <li><strong>Pré-requis :</strong> statistiques descriptives, lecture de graphiques, bases de modélisation, R</li>
         </ul>
       </section>
 
@@ -96,10 +92,9 @@
         <h2>Données</h2>
         <ul>
           <li><strong>Période :</strong> 01/01/2019 → 31/12/2023</li>
-          <li><strong>Granularité :</strong> journalière</li>
           <li><strong>Taille :</strong> 1826 observations</li>
           <li><strong>Qualité :</strong> continuité temporelle vérifiée, pas de valeurs manquantes significatives</li>
-          <li><strong>Valeurs extrêmes :</strong> conservées (grèves / faible activité), car informatives</li>
+          <li><strong>Valeurs extrêmes :</strong> conservées (covid), car informatives</li>
         </ul>
       </section>
 
@@ -108,9 +103,9 @@
         <h2>Objectifs</h2>
         <ul>
           <li>Comprendre la dynamique du trafic (tendance, saisonnalité, volatilité).</li>
-          <li>Identifier l’impact d’événements (jours fériés, grèves) sur l’activité.</li>
+          <li>Identifier l’impact d’événements (jours fériés, covid) sur l’activité.</li>
           <li>Évaluer la dépendance temporelle et la structure des résidus.</li>
-          <li>Construire et comparer des modèles de prévision (ETS / ARIMA) sur un protocole apprentissage/test.</li>
+          <li>Construire et comparer des modèles de prévision.</li>
           <li>Produire des prévisions interprétables avec intervalles de confiance.</li>
         </ul>
       </section>
@@ -135,7 +130,7 @@
           <li><strong>Variabilité court terme :</strong> trafic très fluctuant au quotidien.</li>
           <li><strong>Saisonnalité hebdomadaire :</strong> trafic plus élevé en semaine qu’en week-end.</li>
           <li><strong>Comparaisons :</strong> baisse nette le week-end ; baisse plus modérée les jours fériés.</li>
-          <li><strong>Événements exceptionnels :</strong> journées de grève = chute brutale (anomalies majeures).</li>
+          <li><strong>Événements exceptionnels :</strong> covid = chute brutale (anomalies majeures).</li>
         </ul>
       </section>
 
@@ -185,9 +180,8 @@
       <section class="section-card">
         <h2>Regard critique</h2>
         <p>
-          Les modèles restent sensibles aux événements exceptionnels (grèves, perturbations économiques).
-          Les résultats doivent donc être interprétés avec prudence : les prévisions sont plus fiables à court terme,
-          mais peuvent être dégradées par des chocs exogènes.
+          Les modèles restent sensibles aux événements exceptionnels (covid, perturbations économiques).
+          Les résultats doivent donc être interprétés avec prudence : les prévisions sont plus fiables à court terme.
         </p>
       </section>
 
@@ -241,8 +235,8 @@
 
         <h3>Difficultés / points à retravailler</h3>
         <ul>
-          <li>Gestion des événements rares (grèves) : difficulté à les prédire sans variables explicatives dédiées.</li>
-          <li>Améliorer la robustesse : enrichissement par variables exogènes + scénarios.</li>
+          <li>Gestion des événements rares (covid) : difficulté à les prédire sans variables explicatives dédiées.</li>
+          <li>Améliorer la robustesse : enrichissement par variables + scénarios.</li>
           <li>Approfondir l’interprétation des résidus (structure restante, hypothèses modèle).</li>
         </ul>
       </section>
@@ -252,7 +246,7 @@
         <h2>Environnement technique</h2>
         <ul>
           <li>R</li>
-          <li>Packages : fpp2 / forecast (selon ton installation)</li>
+          <li>Packages : fpp2 / forecast</li>
           <li>Analyse : ACF, décomposition additive</li>
           <li>Modèles : ETS, ARIMA</li>
           <li>Évaluation : RMSE, MAE</li>
@@ -268,17 +262,14 @@
           <div class="proof-placeholder">Graph : décomposition + ACF des résidus</div>
           <div class="proof-placeholder">Graph : prévisions + intervalles (ETS/ARIMA)</div>
         </div>
-        <p style="margin-top: 12px;">
-          Conseil : 4 captures max, très lisibles, avec 1 phrase d’explication sous chaque figure dans ton rapport/README.
-        </p>
       </section>
 
       <!-- LIENS -->
       <section class="section-card">
         <h2>Liens</h2>
         <ul>
-          <li><strong>Repository GitHub :</strong> <a href="#" target="_blank" rel="noopener noreferrer">à renseigner</a></li>
-          <li><strong>Rapport :</strong> <a href="#" target="_blank" rel="noopener noreferrer">à renseigner</a></li>
+          <li><strong>Repository GitHub :</strong> <a href="#" target="_blank" rel="noopener noreferrer">Cliquer ici</a></li>
+          <li><strong>Rapport :</strong> <a href="#" target="_blank" rel="noopener noreferrer">Cliquer ici</a></li>
         </ul>
       </section>
 
