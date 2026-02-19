@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>SAE 3.VCOD.01 – Collecte automatisée de données web | Antonin Cavory--Dupuis</title>
-  <meta name="description" content="SAE 3.VCOD.01 – Collecte automatisée de données web : pipeline Python, API REST, web scraping, nettoyage, stockage, analyse et restitution. Portfolio Antonin Cavory--Dupuis." />
+  <title>SAE 3.02 – Intégration de données dans un Datawarehouse</title>
+  <meta name="description" content="SAE 3.02 – Intégration de données dans un datawarehouse : reverse engineering de Chinook, modélisation (MCD/MLD/MPD), schéma en étoile, scripts SQL, cahier de recette. Portfolio d’Antonin Cavory-Dupuis." />
 
-  <!-- IMPORTANT : style spécifique pages projets -->
+  <!-- CSS dédié pages projets -->
   <link rel="stylesheet" href="../assets/projects.css" />
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
 
-  <meta property="og:title" content="SAE 3.VCOD.01 – Collecte automatisée de données web | Antonin Cavory--Dupuis" />
-  <meta property="og:description" content="Pipeline Python : API + scraping, nettoyage/normalisation, stockage, analyse et restitution." />
+  <!-- OpenGraph -->
+  <meta property="og:title" content="SAE 3.02 – Datawarehouse | Antonin Cavory-Dupuis" />
+  <meta property="og:description" content="Reverse engineering Chinook, modélisation, schéma en étoile, alimentation de l’entrepôt, scripts SQL, cahier de recette." />
 </head>
 
 <body>
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="container nav-container">
-      <a class="logo" href="../index.html">Antonin Cavory--Dupuis</a>
+      <a class="logo" href="../index.html">Antonin Cavory-Dupuis</a>
 
       <nav aria-label="Navigation">
         <ul class="nav-links">
@@ -32,207 +32,224 @@
     </div>
   </header>
 
-  <!-- BREADCRUMB -->
-  <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <a href="../index.html">Accueil</a><span class="sep">›</span>
-    <a href="../index.html#projets">Projets</a><span class="sep">›</span>
-    <span>SAE 3.VCOD.01</span>
-  </nav>
+  <main>
+    <nav class="breadcrumb" aria-label="Fil d’Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">›</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">›</span>
+      <span>SAE 3.02</span>
+    </nav>
 
-  <!-- HERO PROJET -->
-  <section class="project-hero">
-    <div class="container">
-      <div class="project-hero-card">
-        <span class="project-tag">SAE 3.VCOD.01</span>
-        <h1 class="project-title">Collecte automatisée de données web / Application Python</h1>
-        <p class="project-subtitle">
-          Conception d’un pipeline de collecte automatisée combinant <strong>API REST</strong> et <strong>web scraping</strong>,
-          avec nettoyage/normalisation, stockage (CSV / SQLite) et restitution via analyses et visualisations.
-        </p>
+    <!-- HERO PROJET -->
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-hero-card">
+          <span class="project-tag">SAE 3.02</span>
+          <h1 class="project-title">Intégration de données dans un Datawarehouse</h1>
 
-        <div class="project-meta" aria-label="Technologies et notions">
-          <span class="pill">Python</span>
-          <span class="pill">API REST</span>
-          <span class="pill">Web scraping</span>
-          <span class="pill">Pandas</span>
-          <span class="pill">CSV / SQLite</span>
-          <span class="pill">Matplotlib</span>
+          <p class="project-subtitle">
+            Reverse engineering de la base <strong>Chinook</strong>, modélisation (MCD/MLD/MPD),
+            création d’une base <strong>Oracle</strong>, puis conception d’un <strong>schéma en étoile</strong>
+            et alimentation du datawarehouse via scripts SQL, avec <strong>cahier de recette</strong>.
+          </p>
+
+          <div class="project-meta" aria-label="Technologies">
+            <span class="pill">SQL</span>
+            <span class="pill">Oracle</span>
+            <span class="pill">Modélisation</span>
+            <span class="pill">Datawarehouse</span>
+            <span class="pill">Git/GitHub</span>
+          </div>
+
+          <!-- Liens (tu peux remplacer les href quand tu veux) -->
+          <div class="project-actions">
+            <a class="btn" href="../index.html#projets">← Retour aux projets</a>
+            <!-- IMPORTANT : mets bien https:// -->
+            <a class="btn btn-outline" href="https://github.com/" target="_blank" rel="noopener">Voir le repository (GitHub)</a>
+          </div>
+
+          <p class="project-note">
+            <strong>Format :</strong> Binôme • Rapport + soutenance + repository GitHub des livrables
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTENU -->
-  <main class="project-content">
-    <div class="container">
+    <!-- CONTENU -->
+    <section class="project-content">
+      <div class="container">
 
-      <!-- FICHE SAE -->
-      <section class="section-card">
-        <h2>Fiche SAE</h2>
-        <ul>
-          <li><strong>Titre :</strong> SAE 3.VCOD.01 – Collecte automatisée de données web</li>
-          <li><strong>Conditions :</strong> projet encadré (groupe/binôme/individuel selon consignes locales)</li>
-          <li><strong>Rendus :</strong> code + documentation (README), jeu(x) de données produits, restitution (rapport/soutenance si demandé)</li>
-          <li><strong>Pré-requis :</strong> Python (structures, fonctions), bases HTTP/API, notions HTML, nettoyage de données, CSV</li>
-        </ul>
-      </section>
+        <!-- FICHE RAPIDE -->
+        <section class="section-card">
+          <h2>Fiche SAE</h2>
 
-      <!-- CONTEXTE -->
-      <section class="section-card">
-        <h2>Contexte / Problématique</h2>
-        <p>
-          Les organisations ont besoin de données fraîches et fiables. L’objectif est de construire une chaîne reproductible
-          permettant de <strong>collecter</strong> des données (API/scraping), de <strong>contrôler la qualité</strong>,
-          de <strong>structurer</strong> les résultats et de les rendre exploitables pour l’analyse.
-        </p>
-      </section>
+          <ul class="clean-list">
+            <li><strong>Titre :</strong> SAE 3.02 – Intégration de données dans un datawarehouse</li>
+            <li><strong>Conditions :</strong> travail en <strong>binôme</strong></li>
+            <li><strong>Rendus :</strong> <strong>rapport</strong>, <strong>soutenance</strong>, <strong>repository GitHub</strong> (tous livrables)</li>
+            <li><strong>Organisation :</strong> mise en place et suivi d’un <strong>planning</strong> (tâches, estimation, responsable, échéance) mis à jour tout au long du projet</li>
+            <li><strong>Pré-requis :</strong> SQL (requêtes, DDL/DML), bases de la modélisation (MCD/MLD/MPD), compréhension d’un SI et d’un schéma relationnel</li>
+          </ul>
+        </section>
 
-      <!-- OBJECTIFS -->
-      <section class="section-card">
-        <h2>Objectifs</h2>
-        <ul>
-          <li>Identifier des sources pertinentes (API publiques / pages structurées).</li>
-          <li>Automatiser la collecte : fréquence, robustesse, gestion d’erreurs.</li>
-          <li>Nettoyer et normaliser les données (types, valeurs manquantes, formats).</li>
-          <li>Stocker dans un format exploitable (CSV et/ou base SQLite).</li>
-          <li>Produire une restitution : graphiques, indicateurs, synthèse.</li>
-        </ul>
-      </section>
+        <!-- CONTEXTE -->
+        <section class="section-card">
+          <h2>Problème / Contexte</h2>
+          <p>
+            L’objectif est de partir d’une base de production existante (<strong>Chinook</strong>) afin de :
+            <strong>comprendre</strong> son organisation, <strong>reconstruire</strong> sa modélisation,
+            <strong>l’implémenter</strong> en Oracle, puis <strong>construire un entrepôt</strong> (schéma en étoile)
+            pour faciliter l’analyse décisionnelle et la restitution.
+          </p>
+        </section>
 
-      <!-- SOURCES -->
-      <section class="section-card">
-        <h2>Sources de données</h2>
-        <ul>
-          <li><strong>API publiques :</strong> endpoints REST (JSON), pagination, filtres, quotas éventuels.</li>
-          <li><strong>Web scraping :</strong> extraction HTML (sélecteurs), respect du site (robots.txt / fréquence).</li>
-          <li><strong>Fichiers distants :</strong> CSV/exports disponibles en ligne si nécessaire.</li>
-        </ul>
-      </section>
+        <!-- DONNEES -->
+        <section class="section-card">
+          <h2>Données & sources</h2>
+          <p>
+            <strong>Chinook Database</strong> : base qui simule la vente de musique (artistes, albums, titres, factures, clients).
+            Elle couvre notamment les entités : <em>artist</em>, <em>album</em>, <em>track</em>, <em>invoice</em>, <em>invoiceline</em>, <em>customer</em>.
+          </p>
+          <p>
+            Source (référence) : <a class="inline-link" href="https://github.com/lerocha/chinook-database" target="_blank" rel="noopener">Chinook Database (GitHub)</a>
+          </p>
+        </section>
 
-      <!-- PIPELINE -->
-      <section class="section-card">
-        <h2>Pipeline de collecte</h2>
-        <ul>
-          <li><strong>Extraction :</strong> requêtes API / parsing HTML, sauvegarde brute (optionnel).</li>
-          <li><strong>Transformation :</strong> nettoyage (doublons, valeurs manquantes), normalisation des formats (dates, unités).</li>
-          <li><strong>Validation :</strong> contrôles qualité (schéma, types, volumétrie attendue).</li>
-          <li><strong>Logs :</strong> erreurs réseau, codes HTTP, exceptions parsing, retry (si implémenté).</li>
-        </ul>
-      </section>
+        <!-- OBJECTIFS -->
+        <section class="section-card">
+          <h2>Objectifs</h2>
+          <ul class="clean-list">
+            <li><strong>Rétro-conception</strong> : comprendre la base, produire dictionnaire de données + MCD/MLD/MPD</li>
+            <li><strong>Implémentation Oracle</strong> : scripts de création et d’alimentation de la base</li>
+            <li><strong>Analyse SQL</strong> : requêtes répondant à une liste de questions métier</li>
+            <li><strong>Datawarehouse</strong> : concevoir un <strong>modèle en étoile</strong> et créer l’entrepôt</li>
+            <li><strong>Alimentation</strong> : scripts d’alimentation + <strong>cahier de recette</strong> (tests, contrôles)</li>
+            <li><strong>Industrialisation</strong> : dépôt GitHub complet, structuré, documenté</li>
+          </ul>
+        </section>
 
-      <!-- STOCKAGE -->
-      <section class="section-card">
-        <h2>Stockage</h2>
-        <ul>
-          <li><strong>CSV :</strong> export simple et portable (noms de colonnes standardisés).</li>
-          <li><strong>SQLite (option) :</strong> historique de collecte, requêtes SQL rapides, intégrité.</li>
-          <li><strong>Organisation :</strong> dossiers par date / source (si besoin), conventions de nommage.</li>
-        </ul>
-      </section>
+        <!-- DEMARCHE -->
+        <section class="section-card">
+          <h2>Démarche & étapes</h2>
 
-      <!-- ANALYSE / VISU -->
-      <section class="section-card">
-        <h2>Analyse / Visualisation</h2>
-        <ul>
-          <li>Statistiques descriptives, distributions, tendances.</li>
-          <li>Graphiques (Matplotlib) : séries temporelles, bar charts, top N, comparaisons.</li>
-          <li>Synthèse : insights principaux + limites (qualité, biais, couverture des données).</li>
-        </ul>
-      </section>
+          <h3>1) Reverse engineering (rétro-conception)</h3>
+          <ul class="clean-list">
+            <li>Analyse du schéma relationnel existant et des dépendances</li>
+            <li>Production des livrables : <strong>dictionnaire de données</strong>, <strong>MCD</strong>, <strong>MLD</strong>, <strong>MPD</strong></li>
+          </ul>
 
-      <!-- BCC -->
-      <section class="section-card">
-        <h2>BCC mobilisés (compétences)</h2>
+          <h3>2) Création & alimentation de la base Oracle</h3>
+          <ul class="clean-list">
+            <li>Écriture des <strong>scripts SQL</strong> (DDL) : tables, clés primaires/étrangères, contraintes</li>
+            <li>Écriture des <strong>scripts d’alimentation</strong> (DML) pour injecter les données</li>
+          </ul>
 
-        <div class="proofs-grid">
-          <div class="proof-placeholder" aria-label="BCC ANALYSER">
-            <strong>BCC ANALYSER</strong><br />
-            Définir les indicateurs, interpréter les résultats et vérifier la cohérence (tendances, outliers, biais).
+          <h3>3) Analyse SQL (exemples de questions)</h3>
+          <p>
+            Mise en place de requêtes SQL pour répondre à des questions d’analyse, par exemple :
+          </p>
+          <ul class="clean-list">
+            <li>Pays avec le plus grand nombre de clients</li>
+            <li>Client ayant dépensé le plus</li>
+            <li>Genre le plus représenté</li>
+            <li>Pourcentage de chansons jamais achetées</li>
+            <li>Classement des pistes par durée au sein de chaque album</li>
+          </ul>
+
+          <h3>4) Création & alimentation du Datawarehouse</h3>
+          <ul class="clean-list">
+            <li>Conception d’un <strong>schéma en étoile</strong> (faits + dimensions) adapté aux analyses</li>
+            <li>Scripts SQL de création de l’entrepôt</li>
+            <li>Scripts d’alimentation de l’entrepôt</li>
+            <li>Rédaction d’un <strong>cahier de recette</strong> : règles, contrôles, cas de test, résultats attendus</li>
+          </ul>
+        </section>
+
+        <!-- LIVRABLES -->
+        <section class="section-card">
+          <h2>Livrables (repo GitHub)</h2>
+          <ul class="clean-list">
+            <li><strong>Dictionnaire de données</strong> (base de production)</li>
+            <li><strong>MCD / MLD / MPD</strong> de la base</li>
+            <li><strong>Scripts SQL</strong> : création Oracle + alimentation Oracle</li>
+            <li><strong>Requêtes d’analyse</strong> (liste de questions)</li>
+            <li><strong>Modèle en étoile</strong> + scripts de création de l’entrepôt</li>
+            <li><strong>Scripts d’alimentation</strong> du datawarehouse</li>
+            <li><strong>Cahier de recette</strong> (tests + contrôles)</li>
+            <li><strong>Rapport</strong> + supports de soutenance</li>
+          </ul>
+        </section>
+
+        <!-- BCC -->
+        <section class="section-card">
+          <h2>BCC mobilisés (compétences)</h2>
+
+          <div class="bcc-grid">
+            <div class="bcc-item">
+              <h3>BCC ANALYSER</h3>
+              <ul class="clean-list">
+                <li>Questionner la donnée via SQL (indicateurs, classements, agrégations)</li>
+                <li>Interpréter des résultats (ex : top clients, genres dominants, titres non vendus)</li>
+              </ul>
+            </div>
+
+            <div class="bcc-item">
+              <h3>BCC TRAITER</h3>
+              <ul class="clean-list">
+                <li>Nettoyage/normalisation si nécessaire lors de l’intégration</li>
+                <li>Contrôles d’intégrité (clés, doublons, cohérence des volumes)</li>
+              </ul>
+            </div>
+
+            <div class="bcc-item">
+              <h3>BCC MODÉLISER / DÉVELOPPER</h3>
+              <ul class="clean-list">
+                <li>Rétro-conception (MCD/MLD/MPD)</li>
+                <li>Conception DW : faits / dimensions, grain, clés de substitution</li>
+                <li>Scripts SQL DDL/DML robustes</li>
+              </ul>
+            </div>
+
+            <div class="bcc-item">
+              <h3>BCC VALORISER</h3>
+              <ul class="clean-list">
+                <li>Documentation (dictionnaire, modèle, cahier de recette)</li>
+                <li>Structuration du repo GitHub + capacité à présenter le travail en soutenance</li>
+              </ul>
+            </div>
           </div>
+        </section>
 
-          <div class="proof-placeholder" aria-label="BCC TRAITER">
-            <strong>BCC TRAITER</strong><br />
-            Nettoyage, normalisation, gestion des formats, structuration des données pour usage analytique.
-          </div>
+        <!-- COMPETENCES TRANSVERSALES -->
+        <section class="section-card">
+          <h2>Compétences transversales</h2>
+          <ul class="clean-list">
+            <li>Gestion de projet : planning, répartition des tâches, suivi d’avancement</li>
+            <li>Travail en binôme : coordination, revue croisée, résolution de problèmes</li>
+            <li>Rigueur et traçabilité : dépôt GitHub, documentation, tests</li>
+          </ul>
+        </section>
 
-          <div class="proof-placeholder" aria-label="BCC VALORISER">
-            <strong>BCC VALORISER</strong><br />
-            Restitution : graphiques, synthèses, documentation et communication des résultats.
-          </div>
+        <!-- RETOUR -->
+        <section class="section-card">
+          <h2>Acquis & points d’attention</h2>
 
-          <div class="proof-placeholder" aria-label="BCC MODÉLISER / DÉVELOPPER">
-            <strong>BCC MODÉLISER / DÉVELOPPER</strong><br />
-            Développer une application/pipeline robuste : architecture, fonctions, gestion d’erreurs, logs, stockage.
-          </div>
-        </div>
-      </section>
+          <h3>Acquis / points forts</h3>
+          <ul class="clean-list">
+            <li>Capacité à comprendre un schéma existant et à le reconstruire proprement</li>
+            <li>Maîtrise des scripts SQL (création, intégration, analyse)</li>
+            <li>Vision complète “production → entrepôt → exploitation”</li>
+          </ul>
 
-      <!-- COMPETENCES METIER -->
-      <section class="section-card">
-        <h2>Compétences métier mises en œuvre</h2>
-        <ul class="stack-list">
-          <li>Collecte de données via API (requêtes, paramètres, pagination)</li>
-          <li>Web scraping (parsing HTML, sélecteurs, robustesse)</li>
-          <li>Préparation des données (qualité, normalisation, formats)</li>
-          <li>Stockage et structuration (CSV / SQLite)</li>
-          <li>Analyse et restitution (statistiques, visualisations)</li>
-          <li>Documentation et reproductibilité (README, organisation du projet)</li>
-        </ul>
-      </section>
+          <h3>Difficultés / points à retravailler</h3>
+          <ul class="clean-list">
+            <li>Choix du grain et des dimensions : arbitrages et impacts sur les analyses</li>
+            <li>Contrôles qualité : formalisation des règles + automatisation progressive</li>
+            <li>Industrialisation : rendre les scripts plus paramétrables / réutilisables</li>
+          </ul>
+        </section>
 
-      <!-- COMPETENCES TRANSVERSALES -->
-      <section class="section-card">
-        <h2>Compétences transversales</h2>
-        <ul>
-          <li>Organisation : conventions de nommage, structure de dossiers, versioning Git.</li>
-          <li>Rigueur : contrôles qualité, traçabilité, reproductibilité.</li>
-          <li>Communication : synthèse claire des résultats, limites, pistes d’amélioration.</li>
-        </ul>
-      </section>
-
-      <!-- BILAN -->
-      <section class="section-card">
-        <h2>Bilan personnel</h2>
-
-        <h3>Acquis / points forts</h3>
-        <ul>
-          <li>Construction d’un pipeline end-to-end (collecte → traitement → stockage → restitution).</li>
-          <li>Meilleure maîtrise des cas réels : erreurs réseau, parsing, standardisation des données.</li>
-          <li>Structuration du projet (code réutilisable, organisation “propre”).</li>
-        </ul>
-
-        <h3>Difficultés / points à retravailler</h3>
-        <ul>
-          <li>Robustesse du scraping (changements HTML) : prévoir des fallbacks.</li>
-          <li>Gestion des quotas API / limitation de débit : retry/backoff, cache.</li>
-          <li>Automatisation avancée : planification, logs plus complets, tests.</li>
-        </ul>
-      </section>
-
-      <!-- PREUVES -->
-      <section class="section-card">
-        <h2>Preuves (captures, schémas, code)</h2>
-        <div class="proofs-grid">
-          <div class="proof-placeholder">Extrait du code (API / scraping)</div>
-          <div class="proof-placeholder">Exemple de dataset produit (CSV / SQLite)</div>
-          <div class="proof-placeholder">Graphiques / indicateurs clés</div>
-          <div class="proof-placeholder">Schéma du pipeline (ETL léger)</div>
-        </div>
-        <p style="margin-top: 12px;">
-          Astuce : ajoute 2–3 captures maximum par bloc, très lisibles (pas d’images trop chargées).
-        </p>
-      </section>
-
-      <!-- LIENS -->
-      <section class="section-card">
-        <h2>Liens</h2>
-        <ul>
-          <li><strong>Repository GitHub :</strong> <a href="#" target="_blank" rel="noopener noreferrer">à renseigner</a></li>
-          <li><strong>Rapport / support (si applicable) :</strong> <a href="#" target="_blank" rel="noopener noreferrer">à renseigner</a></li>
-        </ul>
-      </section>
-
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="project-footer">
@@ -240,7 +257,5 @@
       <a class="back-link" href="../index.html#projets">← Retour aux projets</a>
     </div>
   </footer>
-
-  <script src="../script.js"></script>
 </body>
 </html>
